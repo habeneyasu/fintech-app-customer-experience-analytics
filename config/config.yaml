@@ -1,0 +1,55 @@
+# Configuration file for Task 1: Data Collection and Preprocessing
+
+# Banks Configuration
+banks:
+  - name: "Commercial Bank of Ethiopia"
+    app_name: "Commercial Bank of Ethiopia Mobile"
+    app_id: "com.combanketh.mobilebanking"
+    code: "CBE"
+    expected_reviews: 8174  # Actual count from downloaded data
+  - name: "Bank of Abyssinia"
+    app_name: "Bank of Abyssinia Mobile"
+    app_id: "com.boa.boaMobileBanking"
+    code: "BOA"
+    expected_reviews: 1200  # Actual count from downloaded data
+  - name: "Dashen Bank"
+    app_name: "Dashen Bank Mobile"
+    app_id: "com.cr2.amolelight"
+    code: "DASHEN"
+    expected_reviews: 507  # Actual count from downloaded data
+
+# Data Source Configuration
+data_source:
+  use_existing_data: true  # Set to true if you already have downloaded data
+  existing_data_file: "data/all_banks_reviews.csv"  # Path to existing data file
+  scrape_new_data: false  # Set to true to scrape new data from Google Play Store
+
+# Scraping Configuration (used only if scrape_new_data is true)
+scraping:
+  min_reviews_per_bank: 400  # Minimum reviews required per bank
+  max_reviews_per_bank: 10000  # Maximum reviews to collect per bank
+  sort_by: "newest"  # Sort order: "newest", "rating", or "helpfulness"
+  batch_size: 100  # Reviews per API request (max 100)
+  retry_attempts: 5  # Number of retry attempts for failed requests
+  retry_delay: 2  # Seconds to wait between retries
+  request_delay: 1  # Seconds to wait between successful requests
+  # Multi-language support: fetches reviews in multiple languages
+  languages:
+    - lang: "am"  # Amharic
+      country: "ET"  # Ethiopia
+    - lang: "en"  # English
+      country: "US"  # United States (fallback)
+
+# Data Processing Configuration
+processing:
+  remove_duplicates: true  # Remove duplicate reviews
+  min_review_length: 3  # Minimum characters in review text
+  max_review_length: 1000  # Maximum characters in review text
+  date_format: "%Y-%m-%d"  # Date format for output (YYYY-MM-DD)
+
+# Paths Configuration
+paths:
+  data_raw: "data/raw"  # Directory for raw scraped data
+  data_processed: "data/processed"  # Directory for cleaned/processed data
+  logs: "logs"  # Directory for log files
+

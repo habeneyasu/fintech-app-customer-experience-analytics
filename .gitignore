@@ -1,0 +1,70 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment variables
+.env
+.env.local
+
+# Data files (keep structure, ignore large files)
+data/raw/*.csv
+data/processed/*.csv
+data/*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+logs/
+*.log
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
+
+# PostgreSQL dumps (optional - uncomment if you want to ignore)
+# *.sql
+
+# Model files (if large)
+models/*.pkl
+models/*.bin
+models/*.h5
+
+# Reports (optional - uncomment if you want to ignore generated reports)
+# reports/*.html
+# reports/*.pdf
+
