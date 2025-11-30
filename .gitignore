@@ -40,6 +40,8 @@ ENV/
 # Data files (keep structure, ignore large files)
 data/raw/*.csv
 data/processed/*.csv
+data/interim/*.csv
+data/results/*.csv
 data/*.db
 *.sqlite
 *.sqlite3
