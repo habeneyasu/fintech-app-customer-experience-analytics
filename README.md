@@ -245,13 +245,57 @@ After completing Task 1, the processed data is ready for:
 - **Task 3**: Database storage in PostgreSQL
 - **Task 4**: Insights generation and visualization
 
-## Version Control
+## Version Control & Git Workflow
 
-The project uses Git for version control with a branch-based workflow:
+The project uses Git for version control with a professional branch-based workflow and pull request (PR) process.
 
-- **Main Branch**: Stable production code
-- **Task Branches**: Feature development
-- **Commit Strategy**: Meaningful commit messages with logical groupings
+### Branch Strategy
+
+- **`main`**: Stable, production-ready code. Only merged via pull requests.
+- **`task-*`**: Feature branches for specific tasks (e.g., `task-1`, `task-2`)
+- **`feature-*`**: Feature branches for other features
+
+### Workflow Process
+
+1. **Create Feature Branch**: Start from `main` and create a new branch
+   ```bash
+   git checkout main
+   git pull origin main
+   git checkout -b task-X
+   ```
+
+2. **Develop & Commit**: Make changes and commit with descriptive messages
+   ```bash
+   git add .
+   git commit -m "Descriptive commit message"
+   git push origin task-X
+   ```
+
+3. **Create Pull Request**: Use the PR template to document:
+   - **Scope**: What changes were made and why
+   - **Testing**: What tests were run and results
+   - **Impact**: Functional, data, and dependency impacts
+
+4. **Review & Merge**: Self-review using the PR as a checkpoint, then merge to `main`
+
+### Pull Request Requirements
+
+All PRs must include:
+- ✅ Complete PR description using the template (`.github/pull_request_template.md`)
+- ✅ Scope section describing changes
+- ✅ Testing section with test results
+- ✅ Impact analysis (functional, data, dependencies)
+- ✅ All checklist items completed
+
+### Benefits
+
+Even when working solo, this workflow provides:
+- ✅ Clear, auditable history
+- ✅ Better change isolation
+- ✅ Review habits for collaboration
+- ✅ Professional development practices
+
+For detailed workflow instructions, see [`.github/workflow-guide.md`](.github/workflow-guide.md).
 
 ## License
 
