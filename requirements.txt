@@ -20,3 +20,8 @@ torch>=2.0.0
 scikit-learn>=1.3.0
 spacy>=3.5.0
 nltk>=3.8.0
+
+# Task 3: Database Storage Dependencies
+
+# PostgreSQL
+psycopg2-binary>=2.9.0

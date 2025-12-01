@@ -53,3 +53,13 @@ paths:
   data_processed: "data/processed"  # Directory for cleaned/processed data
   logs: "logs"  # Directory for log files
 
+# Database Configuration (Task 3)
+database:
+  host: "localhost"  # Database host (or set DB_HOST environment variable)
+  port: 5432  # Database port (or set DB_PORT environment variable)
+  name: "bank_reviews"  # Database name (or set DB_NAME environment variable)
+  user: "postgres"  # Database user (or set DB_USER environment variable)
+  password: ""  # Database password (or set DB_PASSWORD environment variable)
+  # Note: For security, use environment variables for password:
+  # export DB_PASSWORD=your_password
+
