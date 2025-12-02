@@ -203,9 +203,14 @@ python tests/verification/verify_setup.py
 
 **Run**: `python scripts/task_4_insights.py`
 
+**Code Evidence**: See `TASK_4_CODE_EVIDENCE.md` for detailed documentation showing how the code addresses all requirements:
+- Per-bank drivers and pain points computation
+- 3-5 labeled visualizations
+- Recommendations tied to findings with evidence
+
 **Output**:
-- `data/results/visualizations/` - All charts and plots
-- `data/results/insights.json` - Structured insights
+- `data/results/visualizations/` - All charts and plots (labeled)
+- `data/results/insights.json` - Structured insights with drivers, pain points, recommendations
 - `data/results/FINAL_REPORT.md` - 10-page comprehensive report
 
 ---
